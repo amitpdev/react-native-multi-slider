@@ -193,9 +193,7 @@ export default class MultiSlider extends React.Component {
       ? gestureState.dx
       : gestureState.dy;
 
-    const unconfined = I18nManager.isRTL
-      ? this.state.pastOne - accumDistance
-      : accumDistance + this.state.pastOne;
+    const unconfined = accumDistance + this.state.pastOne;
     var bottom = this.props.markerSize / 2;
     var trueTop =
       this.state.positionTwo -
@@ -266,9 +264,7 @@ export default class MultiSlider extends React.Component {
       ? gestureState.dx
       : gestureState.dy;
 
-    const unconfined = I18nManager.isRTL
-      ? this.state.pastTwo - accumDistance
-      : accumDistance + this.state.pastTwo;
+    const unconfined = accumDistance + this.state.pastTwo;
     var bottom =
       this.state.positionOne +
       (this.props.allowOverlap
